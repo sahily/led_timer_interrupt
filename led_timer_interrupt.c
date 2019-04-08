@@ -96,7 +96,7 @@ void resetTimer0(void)
  * Interrupt Service Routine: Timer 0 Interrupt
  * --------------------------------------
  *
- * Runs each timer 0 interrupt is generated 
+ * Runs each time timer 0 interrupt is generated 
  *
  * resets Timer 0's count register to start value, and complements LED pin when certain number of iterations has been reached
  *
