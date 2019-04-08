@@ -87,8 +87,8 @@ void enableInterrupt(void)
 
 void resetTimer0(void)
 {
-    TH0 = 0x4B;
-    TL0 = 0xFD;     
+    TH0 = 0x4C;
+    TL0 = 0x00;     
 }
 
 
