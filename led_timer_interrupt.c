@@ -35,14 +35,15 @@ void main()
  * Function: init
  * -----------------
  *
- * initializes system and variables
+ * clears display, initializes variables, and configures timer mode
  *
  */
 
 void init(void)
 {
     P0 = 0x00;      //clear display
-    x = 0;  
+    x = 0;
+    TMOD = 0x01;    //use Timer 0 in 16-bit Timer operating mode  
 }
 
 
@@ -56,7 +57,6 @@ void init(void)
 
 void configureTimer0(void)
 {
-    TMOD = 0x01;            //use Timer 0 in 16-bit Timer operating mode
     resetTimer0();          //load timer0 start value
     TR0 = 1;                //start Timer 0
     ET0 = 1;                //enable Timer 0 overflow interrupt
