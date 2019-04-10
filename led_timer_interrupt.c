@@ -88,8 +88,8 @@ void enableInterrupt(void)
 void resetTimer0(void)
 {
     TH0 = 0x4C;
-    TL0 = 0x00;     
-}
+    TL0 = 0x0B;         //set to 50 milliseconds   
+}                       // <----- 11 machine cycles from interrupt vector to this line
 
 
 /* --------------------------------------
