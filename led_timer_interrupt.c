@@ -27,7 +27,7 @@ void main()
     init();
     configureTimer0();
     enableInterrupt();
-    while(1);
+    while(1);   
 }
 
 
@@ -110,5 +110,8 @@ void isr_t0() interrupt 1
     {
         pin = ~pin;
         x = 0;
+
+        TL0--;      /* This if condition offsets timer interrupt by one machine cycle.  */
+                    /*    This line is to compensate for this, to keep accurate time    */   
     }
 }
